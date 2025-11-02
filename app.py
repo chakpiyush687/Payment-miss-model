@@ -14,7 +14,7 @@ from fastapi.responses import StreamingResponse
 import io
 
 model = pickle.load(open("final_logistic_model_UPDATED.pkl", "rb"))
-scaler = pickle.load(open("scaler_uPDATED", "rb"))
+scaler = pickle.load(open("scaler_uPDATED.pkl", "rb"))
 
 app = FastAPI()
 
