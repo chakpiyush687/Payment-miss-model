@@ -13,8 +13,8 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import StreamingResponse
 import io
 
-model = pickle.load(open("final_logistic_model_UPDATED.pkl", "rb"))
-scaler = pickle.load(open("scaler_uPDATED.pkl", "rb"))
+model = pickle.load(open("final_logistic_model_0411.pkl", "rb"))
+scaler = pickle.load(open("scaler_0411.pkl", "rb"))
 
 app = FastAPI()
 
