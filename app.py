@@ -22,7 +22,7 @@ app = FastAPI()
 async def score_csv(file: UploadFile = File(...)):
     df = pd.read_csv(file.file)
 
-    X = df.drop(columns=["PaymentMiss_30Days"], errors="ignore")
+    X = df.drop(columns=["PaymentMiss_30Days","Phone_number", "email"], errors="ignore")
     X_scaled = scaler.transform(X)
 
     df["Default_Probability"] = model.predict_proba(X_scaled)[:, 1]
